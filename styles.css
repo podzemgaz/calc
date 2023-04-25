@@ -1,3 +1,8 @@
+:root {
+    --red: #e75a5a;
+    --border: 1px solid rgba(151, 158, 162, 1);
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +15,15 @@ button {
     height: 50px;
 }
 
+textarea {
+    font-size: large;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    height: 50px;
+    width: 158px;
+    border: var(--border);
+}
+
 
 
 .container {
@@ -19,3 +33,25 @@ button {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+
+.row {
+    user-select: none;
+}
+
+textarea.invalid {
+    animation: validate 2s;
+  }
+  
+  @keyframes validate {
+    0% {
+      border: 1px solid var(--red);
+    }
+  
+    50% {
+      border: 1px solid var(--red);
+    }
+  
+    100% {
+      border: var(--border);
+    }
+  }
